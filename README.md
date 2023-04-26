@@ -33,6 +33,16 @@ R1#clear ip ospf process   // nhớ clear để làm mới lại
 | ![space-1.jpg](https://lh5.googleusercontent.com/QZg06I_IUhrTvUAItxdwjQZfaLhzXZJhcG5l1mWpm2gzk5hEMW-M_TP4eRh56bKpmuusmTYuLbsSQio=w2476-h1214) | 
 |:--:| 
 | *Sơ đồ* |
+
+
+Con router 1 
+```
+router-rip
+version 2
+network <mạng gần nó>
+no-autosummary
+```
+
 Con router 2 figure
 ```
 R2(config)#router rip
