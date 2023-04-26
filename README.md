@@ -29,3 +29,17 @@ R1#show ip route ospf
 R1#clear ip ospf process   // nhớ clear để làm mới lại 
 ```
 
+## Cấu hình sơ đồ sau
+| ![space-1.jpg](https://lh5.googleusercontent.com/QZg06I_IUhrTvUAItxdwjQZfaLhzXZJhcG5l1mWpm2gzk5hEMW-M_TP4eRh56bKpmuusmTYuLbsSQio=w2476-h1214) | 
+|:--:| 
+| *Sơ đồ* |
+Con router 2 figure
+```
+R2(config)#router rip
+R2(config-router)#redistribute ospf 1 metric 1
+R2(config-router)#exit
+
+R2(config)#router ospf 1
+R2(config-router)#redistribute rip metric 1 subnets
+R2(config-router)#end
+```
